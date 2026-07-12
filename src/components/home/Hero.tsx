@@ -49,10 +49,10 @@ export default function Hero() {
 
         {/* Trust strip */}
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl border-t border-cream/15 pt-8">
-          <TrustStat value="10+" label="Years on the ground in Dubai" />
-          <TrustStat value="20+" label="Years global business strategy" />
+          <TrustStat value="11+" label="Years in real estate advisory" />
+          <TrustStat value="20+" label="Years in business & marketing" />
           <TrustStat value="RERA" label="Registered & DLD compliant" />
-          <TrustStat value="2" label="Founders, one full-service desk" />
+          <TrustStat value="AI" label="Powered outreach & exit strategy" />
         </div>
       </div>
     </section>

@@ -15,25 +15,25 @@ const doubled = [...developers, ...developers];
 
 export default function DeveloperStrip() {
   return (
-    <section className="bg-cream-light border-y border-navy/5 py-10 overflow-hidden">
-      <div className="container-x mb-8">
+    <section className="bg-cream-light border-y border-navy/5 py-12 overflow-hidden">
+      <div className="container-x mb-10">
         <p className="text-center text-navy/40 eyebrow">
           Across Dubai&rsquo;s Leading Developments
         </p>
       </div>
       <div className="relative">
-        <div className="marquee-track items-center gap-16 px-8">
+        <div className="marquee-track items-center gap-20 px-12">
           {doubled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center h-14 w-36"
+              className="shrink-0 flex items-center justify-center h-24 w-56"
             >
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
-                width={160}
-                height={60}
-                className="h-10 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity grayscale"
+                width={220}
+                height={90}
+                className="h-20 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity grayscale"
               />
             </div>
           ))}

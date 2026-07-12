@@ -7,7 +7,7 @@ const advantages = [
   { stat: "10yr", label: "Golden Visa eligibility on qualifying investment" },
   { stat: "100%", label: "Freehold ownership in designated zones" },
   { stat: "AED", label: "Currency pegged to USD since 1997" },
-  { stat: "5–8%", label: "Typical gross rental yields" },
+  { stat: "6–9%", label: "Typical gross rental yields" },
 ];
 
 export default function WhyDubai() {
