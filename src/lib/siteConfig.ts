@@ -10,12 +10,11 @@ export const siteConfig = {
   },
 
   contact: {
-    // TODO: Replace with real numbers
-    dubaiPhone: "+971 50 000 0000",
-    dubaiPhoneHref: "+971500000000",
-    indiaPhone: "+91 90000 00000",
-    indiaPhoneHref: "+919000000000",
-    whatsappNumber: "971500000000", // digits only, country code, no +
+    dubaiPhone: "+971 56 899 1112",
+    dubaiPhoneHref: "+971568991112",
+    indiaPhone: "+91 99999 11112",
+    indiaPhoneHref: "+919999911112",
+    whatsappNumber: "971568991112", // Dubai number — digits only, country code, no +
     email: "hello@seikiproperties.com",
     officeAddress: "Business Bay, Dubai, United Arab Emirates",
   },
@@ -30,8 +29,7 @@ export const siteConfig = {
   // if the embed breaks or the feed isn't loading correctly.
   showInstagramStrip: true,
 
-  // Developers actually worked with — shown as "Developers We've Transacted With"
-  // TODO: confirm and edit this list before launch.
+  // Developers actually worked with
   developersWorkedWith: ["Sobha", "DAMAC"],
 
   // Wider Dubai market landscape — editorial context only, no implied partnership.

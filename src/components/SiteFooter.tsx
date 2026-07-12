@@ -19,26 +19,26 @@ export default function SiteFooter() {
             </p>
 
             <div className="mt-8 space-y-3 text-sm">
-              <a href={`tel:${siteConfig.contact.dubaiPhoneHref}`} className="flex items-center gap-3 text-cream/80 hover:text-gold transition-colors">
-                <span className="eyebrow text-gold/80 w-16 shrink-0">Dubai</span>
-                {siteConfig.contact.dubaiPhone}
+              <a href={`tel:${siteConfig.contact.dubaiPhoneHref}`} className="flex items-start gap-4 text-cream/80 hover:text-gold transition-colors">
+                <span className="eyebrow text-gold/80 w-24 shrink-0 pt-0.5">Dubai</span>
+                <span>{siteConfig.contact.dubaiPhone}</span>
               </a>
-              <a href={`tel:${siteConfig.contact.indiaPhoneHref}`} className="flex items-center gap-3 text-cream/80 hover:text-gold transition-colors">
-                <span className="eyebrow text-gold/80 w-16 shrink-0">India</span>
-                {siteConfig.contact.indiaPhone}
+              <a href={`tel:${siteConfig.contact.indiaPhoneHref}`} className="flex items-start gap-4 text-cream/80 hover:text-gold transition-colors">
+                <span className="eyebrow text-gold/80 w-24 shrink-0 pt-0.5">India</span>
+                <span>{siteConfig.contact.indiaPhone}</span>
               </a>
-              <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-cream/80 hover:text-gold transition-colors">
-                <span className="eyebrow text-gold/80 w-16 shrink-0">Email</span>
-                {siteConfig.contact.email}
+              <a href={`mailto:${siteConfig.contact.email}`} className="flex items-start gap-4 text-cream/80 hover:text-gold transition-colors">
+                <span className="eyebrow text-gold/80 w-24 shrink-0 pt-0.5">Email</span>
+                <span className="break-all">{siteConfig.contact.email}</span>
               </a>
               <a
                 href={waLink("Hi Seiki Properties, I'd like to know more about investing in Dubai real estate.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-cream/80 hover:text-gold transition-colors"
+                className="flex items-start gap-4 text-cream/80 hover:text-gold transition-colors"
               >
-                <span className="eyebrow text-gold/80 w-16 shrink-0">WhatsApp</span>
-                Chat with us
+                <span className="eyebrow text-gold/80 w-24 shrink-0 pt-0.5">WhatsApp</span>
+                <span>Chat with us</span>
               </a>
             </div>
 
