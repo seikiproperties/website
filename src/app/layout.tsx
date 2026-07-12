@@ -35,6 +35,20 @@ export const metadata: Metadata = {
     siteName: "Seiki Properties",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://seikiproperties.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Seiki Properties — Dubai Real Estate Advisory for Indian Investors",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Seiki Properties | Dubai Real Estate Advisory",
+    description: "Full-service Dubai real estate advisory for Indian HNIs and NRIs — search to exit.",
+    images: ["https://seikiproperties.com/images/og-image.png"],
   },
 };
 

@@ -42,7 +42,7 @@ export const images = {
   downtownStreet:
     "https://images.unsplash.com/photo-1748626083682-611d0a66cb50?fm=jpg&q=80&w=2000&auto=format&fit=crop",
 
-  // Placeholder founder portraits — replace with real photos in /public/images/
-  founderPlaceholder1: "/images/founder-1-placeholder.svg",
-  founderPlaceholder2: "/images/founder-2-placeholder.svg",
+  // Founder portraits
+  founderPlaceholder1: "/images/founder-amit.png",
+  founderPlaceholder2: "/images/founder-mayur.png",
 };

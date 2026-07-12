@@ -8,10 +8,10 @@ module.exports = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0B1320",
-          deep: "#070D16",
-          light: "#152134",
-          mid: "#1C2C45",
+          DEFAULT: "#001f4b",
+          deep: "#001540",
+          light: "#002a63",
+          mid: "#00347a",
         },
         gold: {
           DEFAULT: "#B08D57",
@@ -35,12 +35,12 @@ module.exports = {
         content: "1280px",
       },
       boxShadow: {
-        card: "0 24px 60px -20px rgba(11,19,32,0.35)",
+        card: "0 24px 60px -20px rgba(0,31,75,0.35)",
         gold: "0 18px 40px -16px rgba(176,141,87,0.45)",
       },
       backgroundImage: {
         "navy-gradient":
-          "linear-gradient(180deg, rgba(7,13,22,0.15) 0%, rgba(7,13,22,0.55) 55%, rgba(7,13,22,0.92) 100%)",
+          "linear-gradient(180deg, rgba(0,21,64,0.15) 0%, rgba(0,21,64,0.55) 55%, rgba(0,21,64,0.92) 100%)",
         "navy-radial":
           "radial-gradient(circle at 20% 20%, rgba(176,141,87,0.10), transparent 45%)",
       },

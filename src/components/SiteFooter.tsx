@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, waLink } from "@/lib/siteConfig";
 import ContactForm from "./ContactForm";
@@ -10,9 +11,15 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-14 lg:gap-20">
           {/* Left: brand + details */}
           <div>
-            <span className="text-2xl font-light tracking-wide">
-              Seiki<span className="text-gold font-medium"> Properties</span>
-            </span>
+          <Link href="/">
+            <Image
+              src="/images/seiki-logo.png"
+              alt="Seiki Properties"
+              width={180}
+              height={52}
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
             <p className="mt-4 text-cream/60 text-sm leading-relaxed max-w-sm">
               A full-service Dubai real estate advisory for Indian HNIs, NRIs, and
               business owners — from the first search to a confident exit.

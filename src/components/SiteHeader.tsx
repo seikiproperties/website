@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { siteConfig, waLink } from "@/lib/siteConfig";
 
@@ -23,12 +24,17 @@ export default function SiteHeader() {
           : "bg-gradient-to-b from-navy-deep/80 to-transparent"
       }`}
     >
-      <div className="container-x flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-3 group">
-          <span className="text-xl md:text-2xl font-light tracking-wide text-cream">
-            Seiki
-            <span className="text-gold font-medium"> Properties</span>
-          </span>
+      <div className="container-x flex items-center justify-between py-3">
+        {/* Logo */}
+        <Link href="/" className="flex items-center group shrink-0">
+          <Image
+            src="/images/seiki-logo.png"
+            alt="Seiki Properties"
+            width={180}
+            height={52}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10">

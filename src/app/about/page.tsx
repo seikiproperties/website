@@ -1,32 +1,39 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet the founders of Seiki Properties — a decade of Dubai real estate expertise paired with two decades of global business strategy.",
+    "Meet Amit Sharma and Mayur Gera — the founders of Seiki Properties. Deep real estate expertise, AI-driven marketing, and entrepreneurial rigour in one firm.",
 };
 
 const founders = [
   {
-    name: "Founder One", // TODO: replace with real name
-    title: "Co-Founder · Dubai Market & Investor Relations",
-    photo: images.founderPlaceholder1,
-    bio: [
-      "Based full-time in Dubai for over a decade, Founder One has built one of the most well-connected networks in the city's real estate circles — spanning developers, brokerages, and the off-market relationships that rarely surface in public listings.",
-      "His focus has always been the same: guiding Indian HNIs, NRIs, and business owners of Indian origin into the right real estate decisions, primarily across residential assets, with a clear eye on long-term value rather than short-term inventory.",
-      "Clients work with him because he treats every transaction the way he'd want a friend or family member's capital treated — with patience, scrutiny, and total transparency about risk.",
+    name: "Amit Sharma",
+    title: "Co-Founder · Real Estate Advisory & Investor Relations",
+    photo: "/images/founder-amit.png",
+    intro:
+      "Amit brings over a decade of hands-on real estate advisory experience — built entirely around helping Indian HNIs, NRIs, and business families make the right moves in Dubai's market.",
+    bullets: [
+      "11+ years advising HNIs on building and growing real estate portfolios with market-beating returns",
+      "Expertise across off-plan launches and secondary market transactions in Dubai's most sought-after communities",
+      "Trusted by Indian HNI, NRI, and business families for end-to-end investment guidance — from first call to signed deal",
+      "Direct access to top Dubai developers, brokerages, and off-market inventory that rarely reaches public listings",
+      "Specialist focus on wealth management through real estate: right market entry, structured acquisition, and planned exit",
     ],
   },
   {
-    name: "Founder Two", // TODO: replace with real name
-    title: "Co-Founder · Strategy & Exit Planning",
-    photo: images.founderPlaceholder2,
-    bio: [
-      "Founder Two spent close to twenty years across Fortune 500 companies and his own ventures, working in senior business and marketing leadership roles before turning his attention to real estate.",
-      "That background shapes how Seiki operates: every recommendation is built on a strategist's framework, not a salesperson's pitch — what is the right opportunity for this specific goal, and what does a good exit actually look like when the time comes.",
-      "He believes the best real estate advice looks a lot like good business advice: clear-eyed about risk, honest about timelines, and focused on the outcome rather than the transaction.",
+    name: "Mayur Gera",
+    title: "Co-Founder · Strategy, Marketing & Growth",
+    photo: "/images/founder-mayur.png",
+    intro:
+      "Mayur brings close to 20 years of experience spanning entrepreneurship, marketing, sales, and consulting — across Fortune 500 companies, tech startups, and real estate ventures.",
+    bullets: [
+      "AI-driven GTM architect: built outbound systems handling 100k+ emails/month with documented 2.5% response rates and measurable conversion impact",
+      "Designed and shipped proprietary sales and marketing tools using AI — lead scoring dashboards, campaign trackers, and automated prospecting workflows",
+      "Produced full rebrands, product literature overhauls, and UI/UX redesigns for B2B companies",
+      "Produced the SalesCode CXO Conclave — attended by 150+ CPG CEOs, CSOs, and CIOs — delivering measurable pipeline and brand authority",
+      "Brings the full marketing and exit playbook to real estate: positioning, demand generation, pipeline management, and deal close strategy",
     ],
   },
 ];
@@ -38,53 +45,108 @@ export default function AboutPage() {
         <div className="container-x">
           <span className="eyebrow text-gold">About Seiki Properties</span>
           <h1 className="mt-5 text-3xl md:text-5xl font-light leading-tight max-w-3xl">
-            Built by two people who think about real estate
-            <span className="block italic text-gold">very differently — on purpose.</span>
+            Deep real estate experience.
+            <span className="block italic text-gold">
+              AI-driven strategy. One firm.
+            </span>
           </h1>
           <p className="mt-6 text-cream/65 text-base md:text-lg max-w-2xl leading-relaxed">
-            Seiki Properties exists because Dubai real estate rewards two things
-            that rarely live in the same place: deep local access, and the
-            discipline of a strategist. We built the firm around both.
+            Seiki Properties was built on a belief that Dubai real estate
+            rewards two things that rarely live in the same place: deep
+            on-ground access and the marketing and strategic rigour of a
+            well-run business. We built the firm around both.
           </p>
         </div>
       </section>
 
+      {/* The combination */}
       <section className="section bg-cream-light">
         <div className="container-x">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {founders.map((f) => (
-              <div key={f.name}>
-                <div className="relative aspect-[5/6] overflow-hidden mb-8 border border-navy/10">
-                  <Image
-                    src={f.photo}
-                    alt={`Portrait of ${f.name}, ${f.title}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-                <h2 className="text-navy text-2xl font-medium">{f.name}</h2>
-                <p className="text-gold-dark text-sm mt-1 mb-5">{f.title}</p>
-                <div className="space-y-4">
-                  {f.bio.map((para, i) => (
-                    <p key={i} className="text-navy/65 text-sm leading-relaxed">
-                      {para}
-                    </p>
-                  ))}
-                </div>
+          <div className="max-w-2xl mb-12">
+            <span className="eyebrow text-gold-dark">Why We&rsquo;re Different</span>
+            <h2 className="mt-4 text-navy text-2xl md:text-3xl font-light leading-tight">
+              Three capabilities. One integrated firm.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-navy/10">
+            {[
+              {
+                num: "01",
+                title: "Core Real Estate Experience",
+                copy: "11+ years of transacting, advising, and managing wealth through Dubai real estate — with the relationships and track record to match.",
+              },
+              {
+                num: "02",
+                title: "Entrepreneurship & Marketing",
+                copy: "Two decades of business building, brand strategy, and revenue architecture — applied to how we position, market, and exit your investment.",
+              },
+              {
+                num: "03",
+                title: "AI-Driven Technology",
+                copy: "Proprietary AI-powered tools for outreach, lead qualification, and market intelligence — giving our clients an edge that traditional brokerages don't have.",
+              },
+            ].map((p) => (
+              <div key={p.num} className="bg-cream-light p-8">
+                <span className="text-gold/50 text-sm font-medium">{p.num}</span>
+                <h3 className="text-navy text-lg font-medium mt-4 mb-3">{p.title}</h3>
+                <p className="text-navy/60 text-sm leading-relaxed">{p.copy}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Founders */}
       <section className="section bg-navy text-cream">
-        <div className="container-x max-w-3xl">
-          <span className="eyebrow text-gold">Our Philosophy</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-light leading-tight mb-8">
-            Real estate is a strategy decision before it&rsquo;s a property decision.
+        <div className="container-x">
+          <span className="eyebrow text-gold">The Founders</span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-light leading-tight mb-14">
+            Two founders. One complete advisory.
           </h2>
-          <div className="space-y-5 text-cream/65 text-base leading-relaxed">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {founders.map((f) => (
+              <div key={f.name}>
+                <div className="relative aspect-[5/6] overflow-hidden mb-8 border border-gold/20">
+                  <Image
+                    src={f.photo}
+                    alt={`Portrait of ${f.name}`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <h2 className="text-2xl font-semibold">{f.name}</h2>
+                <p className="text-gold text-sm mt-1 mb-4">{f.title}</p>
+                <p className="text-cream/60 text-sm leading-relaxed mb-5 italic">
+                  {f.intro}
+                </p>
+                <ul className="space-y-3">
+                  {f.bullets.map((b, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-cream/75 text-sm leading-relaxed"
+                    >
+                      <span className="text-gold mt-0.5 shrink-0">—</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="section bg-cream-light">
+        <div className="container-x max-w-3xl">
+          <span className="eyebrow text-gold-dark">Our Philosophy</span>
+          <h2 className="mt-4 text-navy text-3xl md:text-4xl font-light leading-tight mb-8">
+            Real estate is a strategy decision
+            <span className="block italic text-gold-dark">before it&rsquo;s a property decision.</span>
+          </h2>
+          <div className="space-y-5 text-navy/65 text-base leading-relaxed">
             <p>
               Most agencies sell inventory. We start from the opposite end —
               what are you actually trying to achieve, and which combination of
@@ -95,7 +157,7 @@ export default function AboutPage() {
               That&rsquo;s the gap we saw for Indian investors specifically: plenty
               of access to listings, very little access to someone who will
               think about the exit on day one, who understands repatriation and
-              compliance concerns natively, and who brings the same rigor to a
+              compliance concerns natively, and who brings the same rigour to a
               property decision that a well-run business would bring to a
               capital allocation decision.
             </p>
