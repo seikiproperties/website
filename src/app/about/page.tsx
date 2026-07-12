@@ -108,20 +108,16 @@ export default function AboutPage() {
             {founders.map((f) => (
               <div key={f.name}>
                 <div
-                  className="relative aspect-[5/6] overflow-hidden mb-8 border border-gold/20"
-                  style={{
-                    background: "linear-gradient(160deg, #002a63 0%, #001f4b 60%, #001540 100%)",
-                  }}
+                  className="relative aspect-[5/6] overflow-hidden mb-8 border border-gold/30 bg-cream-dark"
                 >
                   <Image
                     src={f.photo}
                     alt={`Portrait of ${f.name}`}
                     fill
                     className="object-cover object-top"
-                    style={{ mixBlendMode: "multiply" }}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gold/10 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-navy via-navy/40 to-transparent pointer-events-none" />
                 </div>
                 <h2 className="text-2xl font-semibold">{f.name}</h2>
                 <p className="text-gold text-sm mt-1 mb-4">{f.title}</p>

@@ -5,49 +5,58 @@ import { WhatsAppIcon } from "../SiteHeader";
 export default function FinalCTA() {
   return (
     <section className="bg-gold py-16 md:py-20">
-      <div className="container-x flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+      <div className="container-x">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
 
-        {/* Left: copy */}
-        <div className="max-w-xl">
-          <h2 className="text-navy text-2xl md:text-3xl font-semibold leading-tight">
-            Ready to invest smarter in Dubai?
-          </h2>
-          <p className="mt-3 text-navy/70 text-base leading-relaxed">
-            One conversation with our team is all it takes to get clarity on
-            your options, your returns, and your next move.
-          </p>
-        </div>
+          {/* Left: copy */}
+          <div className="max-w-lg">
+            <h2 className="text-navy text-2xl md:text-3xl font-semibold leading-tight">
+              Ready to invest smarter in Dubai?
+            </h2>
+            <p className="mt-3 text-navy/70 text-base leading-relaxed">
+              One conversation with our team is all it takes to get clarity on
+              your options, your returns, and your next move.
+            </p>
+          </div>
 
-        {/* Right: CTAs */}
-        <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-center gap-4 xl:gap-6">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center bg-navy hover:bg-navy-light text-cream font-medium text-sm tracking-wide px-8 py-4 rounded-full transition-colors whitespace-nowrap shadow-md"
-          >
-            Book a Consultation
-          </Link>
+          {/* Right: CTAs — tightly grouped, no stray space */}
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center gap-3">
 
-          <a
-            href={waLink("Hi Seiki Properties, I'd like to know more about investing in Dubai real estate.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/35 text-navy font-medium text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap"
-          >
-            <WhatsAppIcon className="w-5 h-5" />
-            WhatsApp Us
-          </a>
+            <Link
+              href="/contact"
+              className="btn-capsule bg-navy hover:bg-navy-light text-cream shadow-md px-10 py-4"
+            >
+              Book a Consultation
+            </Link>
 
-          {/* Phone numbers — each on one line */}
-          <div className="flex flex-col gap-1.5 text-navy/80 text-sm">
-            <a href={`tel:${siteConfig.contact.dubaiPhoneHref}`} className="hover:text-navy transition-colors whitespace-nowrap font-medium">
-              🇦🇪 {siteConfig.contact.dubaiPhone}
+            <a
+              href={waLink("Hi Seiki Properties, I'd like to know more about investing in Dubai real estate.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-capsule bg-white/25 hover:bg-white/40 text-navy gap-2 px-8 py-4"
+            >
+              <WhatsAppIcon className="w-5 h-5" />
+              WhatsApp Us
             </a>
-            <a href={`tel:${siteConfig.contact.indiaPhoneHref}`} className="hover:text-navy transition-colors whitespace-nowrap font-medium">
-              🇮🇳 {siteConfig.contact.indiaPhone}
-            </a>
+
+            {/* Phone numbers */}
+            <div className="flex flex-col justify-center gap-1 pl-2">
+              <a
+                href={`tel:${siteConfig.contact.dubaiPhoneHref}`}
+                className="text-navy font-medium text-sm whitespace-nowrap hover:text-navy/70 transition-colors"
+              >
+                🇦🇪 {siteConfig.contact.dubaiPhone}
+              </a>
+              <a
+                href={`tel:${siteConfig.contact.indiaPhoneHref}`}
+                className="text-navy font-medium text-sm whitespace-nowrap hover:text-navy/70 transition-colors"
+              >
+                🇮🇳 {siteConfig.contact.indiaPhone}
+              </a>
+            </div>
+
           </div>
         </div>
-
       </div>
     </section>
   );

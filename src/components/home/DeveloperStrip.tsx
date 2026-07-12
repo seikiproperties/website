@@ -1,17 +1,18 @@
 import Image from "next/image";
 
 const developers = [
-  { id: "sobha",      name: "Sobha Realty",        file: "sobha.png" },
-  { id: "damac",      name: "DAMAC",               file: "damac.png" },
-  { id: "emaar",      name: "Emaar",               file: "emaar.png" },
-  { id: "nakheel",    name: "Nakheel",             file: "nakheel.png" },
-  { id: "aldar",      name: "Aldar",               file: "aldar.png" },
-  { id: "imtiaz",     name: "Imtiaz Developments", file: "imtiaz.png" },
-  { id: "ellington",  name: "Ellington Properties",file: "ellington.png" },
-  { id: "binghatti",  name: "Binghatti",           file: "binghatti.png" },
+  { id: "sobha",     name: "Sobha Realty",         file: "sobha.png" },
+  { id: "damac",     name: "DAMAC",                file: "damac.png" },
+  { id: "emaar",     name: "Emaar",                file: "emaar.png" },
+  { id: "nakheel",   name: "Nakheel",              file: "nakheel.png" },
+  { id: "aldar",     name: "Aldar",                file: "aldar.png" },
+  { id: "imtiaz",    name: "Imtiaz Developments",  file: "imtiaz.png" },
+  { id: "ellington", name: "Ellington Properties", file: "ellington.png" },
+  { id: "binghatti", name: "Binghatti",            file: "binghatti.png" },
 ];
 
-const doubled = [...developers, ...developers];
+// Triple for seamless infinite loop — ensures no gap at the seam
+const tripled = [...developers, ...developers, ...developers];
 
 export default function DeveloperStrip() {
   return (
@@ -21,25 +22,29 @@ export default function DeveloperStrip() {
           Across Dubai&rsquo;s Leading Developments
         </p>
       </div>
-      <div className="relative">
-        <div className="marquee-track items-center gap-20 px-12">
-          {doubled.map(({ id, name, file }, i) => (
+
+      <div className="relative overflow-hidden">
+        {/* Sliding track — animates right to left */}
+        <div className="developer-marquee flex items-center gap-20 w-max">
+          {tripled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center h-24 w-56"
+              className="shrink-0 flex items-center justify-center h-24 w-48"
             >
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
-                width={220}
-                height={90}
-                className="h-20 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity grayscale"
+                width={192}
+                height={80}
+                className="h-16 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-cream-light to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-cream-light to-transparent" />
+
+        {/* Edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-cream-light to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-cream-light to-transparent z-10" />
       </div>
     </section>
   );

@@ -73,13 +73,31 @@ textarea:focus-visible {
   }
 }
 
-/* Marquee for developer logo strip and instagram */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 38s linear infinite;
+/* Developer logo marquee — slides right to left */
+.developer-marquee {
+  animation: developerScroll 40s linear infinite;
 }
 
-.marquee-track:hover {
+.developer-marquee:hover {
   animation-play-state: paused;
+}
+
+@keyframes developerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+/* Capsule button base utility */
+.btn-capsule {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
 }

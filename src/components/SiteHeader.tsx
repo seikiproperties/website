@@ -61,7 +61,7 @@ export default function SiteHeader() {
           </a>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy text-sm font-medium tracking-wide px-6 py-3 rounded-sm transition-colors"
+            className="btn-capsule bg-gold hover:bg-gold-light text-navy text-sm font-medium px-7 py-3"
           >
             Book a Consultation
           </Link>
@@ -105,7 +105,7 @@ export default function SiteHeader() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="inline-flex justify-center items-center bg-gold text-navy font-medium px-6 py-3 rounded-sm"
+            className="btn-capsule bg-gold text-navy font-medium px-6 py-3 justify-center"
           >
             Book a Consultation
           </Link>

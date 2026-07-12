@@ -34,13 +34,13 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-medium text-sm tracking-wide px-8 py-4 rounded-sm transition-colors shadow-gold"
+              className="btn-capsule bg-gold hover:bg-gold-light text-navy font-medium px-10 py-4 shadow-gold"
             >
               Book a Consultation
             </Link>
             <Link
               href="/properties"
-              className="inline-flex items-center gap-2 border border-cream/30 hover:border-gold hover:text-gold text-cream text-sm tracking-wide px-8 py-4 rounded-sm transition-colors"
+              className="btn-capsule border border-cream/30 hover:border-gold hover:text-gold text-cream px-10 py-4"
             >
               Explore Properties
             </Link>
