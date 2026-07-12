@@ -30,9 +30,9 @@ export default function SiteHeader() {
           <Image
             src="/images/seiki-logo.png"
             alt="Seiki Properties"
-            width={180}
-            height={52}
-            className="h-10 w-auto object-contain"
+            width={240}
+            height={68}
+            className="h-14 w-auto object-contain"
             priority
           />
         </Link>

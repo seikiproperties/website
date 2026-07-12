@@ -20,8 +20,8 @@ export const siteConfig = {
   },
 
   social: {
-    instagramHandle: "@seikiproperties", // TODO: confirm real handle
-    instagramUrl: "https://instagram.com/seikiproperties",
+    instagramHandle: "@seiki.properties", // TODO: confirm real handle
+    instagramUrl: "https://www.instagram.com/seiki.properties/",
     linkedinUrl: "https://linkedin.com/company/seikiproperties",
   },
 

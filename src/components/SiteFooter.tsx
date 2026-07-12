@@ -15,9 +15,9 @@ export default function SiteFooter() {
             <Image
               src="/images/seiki-logo.png"
               alt="Seiki Properties"
-              width={180}
-              height={52}
-              className="h-10 w-auto object-contain"
+              width={220}
+              height={64}
+              className="h-12 w-auto object-contain"
             />
           </Link>
             <p className="mt-4 text-cream/60 text-sm leading-relaxed max-w-sm">

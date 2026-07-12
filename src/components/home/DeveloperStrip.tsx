@@ -1,8 +1,19 @@
-import { developerLogos } from "./DeveloperLogos";
+import Image from "next/image";
+
+const developers = [
+  { id: "sobha",      name: "Sobha Realty",        file: "sobha.png" },
+  { id: "damac",      name: "DAMAC",               file: "damac.png" },
+  { id: "emaar",      name: "Emaar",               file: "emaar.png" },
+  { id: "nakheel",    name: "Nakheel",             file: "nakheel.png" },
+  { id: "aldar",      name: "Aldar",               file: "aldar.png" },
+  { id: "imtiaz",     name: "Imtiaz Developments", file: "imtiaz.png" },
+  { id: "ellington",  name: "Ellington Properties",file: "ellington.png" },
+  { id: "binghatti",  name: "Binghatti",           file: "binghatti.png" },
+];
+
+const doubled = [...developers, ...developers];
 
 export default function DeveloperStrip() {
-  const doubled = [...developerLogos, ...developerLogos];
-
   return (
     <section className="bg-cream-light border-y border-navy/5 py-10 overflow-hidden">
       <div className="container-x mb-8">
@@ -12,12 +23,18 @@ export default function DeveloperStrip() {
       </div>
       <div className="relative">
         <div className="marquee-track items-center gap-16 px-8">
-          {doubled.map(({ id, Logo }, i) => (
+          {doubled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 text-navy/30 hover:text-navy/55 transition-colors flex items-center h-10"
+              className="shrink-0 flex items-center justify-center h-14 w-36"
             >
-              <Logo className="h-7 w-auto" />
+              <Image
+                src={`/images/developers/${file}`}
+                alt={name}
+                width={160}
+                height={60}
+                className="h-10 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity grayscale"
+              />
             </div>
           ))}
         </div>
