@@ -27,14 +27,14 @@ export default function DeveloperStrip() {
           {tripled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center px-3 md:px-4"
+              className="shrink-0 flex items-center justify-center px-2 md:px-4"
             >
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
                 width={400}
                 height={144}
-                className="h-32 md:h-36 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
+                className="h-24 md:h-36 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}

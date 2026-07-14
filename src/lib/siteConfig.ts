@@ -15,7 +15,7 @@ export const siteConfig = {
     indiaPhone: "+91 99999 11112",
     indiaPhoneHref: "+919999911112",
     whatsappNumber: "971568991112", // Dubai number — digits only, country code, no +
-    email: "hello@seikiproperties.com",
+    email: "contact@seikiproperties.com",
     officeAddress: "Business Bay, Dubai, United Arab Emirates",
   },
 
