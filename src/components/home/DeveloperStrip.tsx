@@ -32,9 +32,9 @@ export default function DeveloperStrip() {
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
-                width={280}
-                height={100}
-                className="h-20 md:h-20 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
+                width={400}
+                height={144}
+                className="h-32 md:h-36 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}
