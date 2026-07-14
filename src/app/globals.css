@@ -73,9 +73,9 @@ textarea:focus-visible {
   }
 }
 
-/* Developer logo marquee — slides right to left */
+/* Developer logo marquee — slides right to left, seamless loop */
 .developer-marquee {
-  animation: developerScroll 40s linear infinite;
+  animation: developerScroll 30s linear infinite;
 }
 
 .developer-marquee:hover {
@@ -84,7 +84,7 @@ textarea:focus-visible {
 
 @keyframes developerScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
+  100% { transform: translateX(-25%); }
 }
 
 /* Capsule button base utility */

@@ -11,12 +11,13 @@ const developers = [
   { id: "binghatti", name: "Binghatti",            file: "binghatti.png" },
 ];
 
-const tripled = [...developers, ...developers, ...developers];
+// Quadruple so the loop is seamless — animation moves exactly 25% = one full set
+const quadrupled = [...developers, ...developers, ...developers, ...developers];
 
 export default function DeveloperStrip() {
   return (
-    <section className="bg-cream-light border-y border-navy/5 py-12 overflow-hidden">
-      <div className="container-x mb-10">
+    <section className="bg-cream-light border-y border-navy/5 py-10 overflow-hidden">
+      <div className="container-x mb-8">
         <p className="text-center text-navy/40 eyebrow">
           Across Dubai&rsquo;s Leading Developments
         </p>
@@ -24,24 +25,25 @@ export default function DeveloperStrip() {
 
       <div className="relative overflow-hidden">
         <div className="developer-marquee flex items-center w-max">
-          {tripled.map(({ id, name, file }, i) => (
+          {quadrupled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center px-2 md:px-4"
+              className="shrink-0 flex items-center justify-center px-4"
+              style={{ width: "45vw", maxWidth: "220px" }}
             >
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
-                width={400}
-                height={144}
-                className="h-24 md:h-36 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
+                width={300}
+                height={120}
+                className="w-full h-auto object-contain opacity-60 hover:opacity-90 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}
         </div>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream-light to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-cream-light to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-cream-light to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-cream-light to-transparent z-10" />
       </div>
     </section>
   );
