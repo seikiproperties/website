@@ -34,7 +34,7 @@ export default function DeveloperStrip() {
                 alt={name}
                 width={280}
                 height={100}
-                className="h-20 md:h-12 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
+                className="h-20 md:h-20 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}
