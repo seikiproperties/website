@@ -27,7 +27,7 @@ export default function DeveloperStrip() {
           {tripled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center px-6 md:px-8"
+              className="shrink-0 flex items-center justify-center px-3 md:px-4"
             >
               <Image
                 src={`/images/developers/${file}`}
