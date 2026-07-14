@@ -28,7 +28,7 @@ export default function DeveloperStrip() {
           {quadrupled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center px-1"
+              className="shrink-0 flex items-center justify-center px-0"
               style={{ width: "90vw", maxWidth: "440px" }}
             >
               <Image
