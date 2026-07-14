@@ -11,7 +11,6 @@ const developers = [
   { id: "binghatti", name: "Binghatti",            file: "binghatti.png" },
 ];
 
-// Triple for seamless infinite loop — ensures no gap at the seam
 const tripled = [...developers, ...developers, ...developers];
 
 export default function DeveloperStrip() {
@@ -24,27 +23,25 @@ export default function DeveloperStrip() {
       </div>
 
       <div className="relative overflow-hidden">
-        {/* Sliding track — animates right to left */}
-        <div className="developer-marquee flex items-center gap-20 w-max">
+        <div className="developer-marquee flex items-center w-max">
           {tripled.map(({ id, name, file }, i) => (
             <div
               key={`${id}-${i}`}
-              className="shrink-0 flex items-center justify-center h-24 w-48"
+              className="shrink-0 flex items-center justify-center px-6 md:px-8"
             >
               <Image
                 src={`/images/developers/${file}`}
                 alt={name}
-                width={192}
-                height={80}
-                className="h-16 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity grayscale hover:grayscale-0"
+                width={280}
+                height={100}
+                className="h-20 md:h-12 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity grayscale hover:grayscale-0"
               />
             </div>
           ))}
         </div>
 
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-cream-light to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-cream-light to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream-light to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-cream-light to-transparent z-10" />
       </div>
     </section>
   );
