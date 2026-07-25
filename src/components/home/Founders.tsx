@@ -16,21 +16,32 @@ export default function Founders() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-2xl">
+        {/* Full-width two-column layout — photo left, bio right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Photo */}
+          <div className="relative aspect-[4/5] overflow-hidden border border-gold/30 bg-cream-dark">
+            <Image
+              src="/images/founder-amit.png"
+              alt="Portrait of Amit Sharma, Founder of Seiki Properties"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-navy via-navy/40 to-transparent pointer-events-none" />
+          </div>
+
+          {/* Bio */}
           <div>
-            <div className="relative aspect-[5/6] overflow-hidden mb-6 border border-gold/30 bg-cream-dark">
-              <Image
-                src="/images/founder-amit.png"
-                alt="Portrait of Amit Sharma"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-navy via-navy/40 to-transparent pointer-events-none" />
-            </div>
-            <h3 className="text-xl font-semibold">Amit Sharma</h3>
-            <p className="text-gold text-sm mt-1 mb-5">Founder · Real Estate Advisory & Investor Relations</p>
-            <ul className="space-y-2">
+            <h3 className="text-2xl md:text-3xl font-semibold">Amit Sharma</h3>
+            <p className="text-gold text-sm mt-2 mb-6">
+              Founder · Real Estate Advisory & Investor Relations
+            </p>
+            <p className="text-cream/60 text-sm leading-relaxed mb-8 italic">
+              Amit brings over a decade of hands-on real estate advisory
+              experience — built entirely around helping Indian HNIs, NRIs, and
+              business families make the right moves in Dubai&rsquo;s market.
+            </p>
+            <ul className="space-y-3">
               {[
                 "11+ years advising HNIs on building and growing real estate portfolios with market-beating returns",
                 "Deep expertise in off-plan and secondary market transactions across Dubai's key communities",
