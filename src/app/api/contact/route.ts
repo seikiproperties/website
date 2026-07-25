@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
     // Email to Seiki Properties inbox
     await transporter.sendMail({
-      from: `"Seiki Properties Website" <${process.env.GMAIL_USER}>`,
+      from: `"Seiki Properties" <${process.env.GMAIL_USER}>`,
       to: "contact@seikiproperties.com",
       replyTo: email,
       subject: `New Enquiry from ${name} — Seiki Properties`,
