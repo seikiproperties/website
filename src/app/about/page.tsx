@@ -4,8 +4,37 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet Amit Sharma, founder of Seiki Properties — over a decade of Dubai real estate expertise serving Indian HNIs, NRIs, and business owners.",
+    "Meet Amit Sharma and Mayur Gera, co-founders of Seiki Properties — deep real estate expertise and AI-driven marketing strategy in one firm.",
 };
+
+const founders = [
+  {
+    name: "Amit Sharma",
+    title: "Co-Founder · Real Estate Advisory & Investor Relations",
+    photo: "/images/founder-amit.png",
+    intro: "Amit brings over a decade of hands-on real estate advisory experience — built entirely around helping Indian HNIs, NRIs, and business families make the right moves in Dubai's market.",
+    bullets: [
+      "11+ years advising HNIs on building and growing real estate portfolios with market-beating returns",
+      "Expertise across off-plan launches and secondary market transactions in Dubai's most sought-after communities",
+      "Trusted by Indian HNI, NRI, and business families for end-to-end investment guidance — from first call to signed deal",
+      "Direct access to top Dubai developers, brokerages, and off-market inventory that rarely reaches public listings",
+      "Specialist focus on wealth management through real estate: right market entry, structured acquisition, and planned exit",
+    ],
+  },
+  {
+    name: "Mayur Gera",
+    title: "Co-Founder · Strategy, Marketing & Growth",
+    photo: "/images/founder-mayur.png",
+    intro: "Mayur brings close to 20 years of experience spanning entrepreneurship, marketing, sales, and consulting — across Fortune 500 companies, tech startups, and real estate ventures.",
+    bullets: [
+      "~20 years across entrepreneurship, marketing, sales and consulting — Fortune 500, tech startups, and real estate",
+      "AI-driven GTM architect: built systems managing 100k+ outbound touchpoints/month with documented 2.5% response rates",
+      "Designed and shipped proprietary AI-powered tools — lead scoring dashboards, campaign trackers, and automated prospecting workflows",
+      "Produced the SalesCode CXO Conclave — attended by 150+ CPG CEOs, CSOs, and CIOs — delivering measurable pipeline and brand authority",
+      "Brings the full marketing and exit playbook to real estate — positioning, demand gen, pipeline management, and deal close strategy",
+    ],
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -14,98 +43,56 @@ export default function AboutPage() {
         <div className="container-x">
           <span className="eyebrow text-gold">About Seiki Properties</span>
           <h1 className="mt-5 text-3xl md:text-5xl font-light leading-tight max-w-3xl">
-            Built on real experience.
-            <span className="block italic text-gold">
-              Focused on real outcomes.
-            </span>
+            Deep real estate experience.
+            <span className="block italic text-gold">AI-driven strategy. One firm.</span>
           </h1>
           <p className="mt-6 text-cream/65 text-base md:text-lg max-w-2xl leading-relaxed">
-            Seiki Properties exists because Dubai real estate rewards one thing
-            above all else: deep on-ground access paired with the discipline to
-            prioritise investor outcomes over transaction volume.
+            Seiki Properties was built on a belief that Dubai real estate rewards two things that rarely live in the same place: deep on-ground access and the marketing and strategic rigour of a well-run business. We built the firm around both.
           </p>
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="section bg-cream-light">
+      <section className="section bg-navy text-cream">
         <div className="container-x">
-          <span className="eyebrow text-gold-dark">The Founder</span>
-          <h2 className="mt-4 text-navy text-2xl md:text-3xl font-light leading-tight mb-12">
-            Amit Sharma
+          <span className="eyebrow text-gold">The Co-Founders</span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-light leading-tight mb-14">
+            Two co-founders. One complete advisory.
           </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-4xl">
-            <div>
-              <div
-                className="relative aspect-[5/6] overflow-hidden mb-8 border border-gold/30 bg-cream-dark"
-              >
-                <Image
-                  src="/images/founder-amit.png"
-                  alt="Portrait of Amit Sharma, Founder of Seiki Properties"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-cream-dark via-cream/40 to-transparent pointer-events-none" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {founders.map((f) => (
+              <div key={f.name}>
+                <div className="relative aspect-[4/5] overflow-hidden mb-8 border border-gold/30 bg-cream-dark">
+                  <Image src={f.photo} alt={"Portrait of " + f.name} fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-navy via-navy/40 to-transparent pointer-events-none" />
+                </div>
+                <h2 className="text-2xl font-semibold">{f.name}</h2>
+                <p className="text-gold text-sm mt-1 mb-4">{f.title}</p>
+                <p className="text-cream/60 text-sm leading-relaxed mb-5 italic">{f.intro}</p>
+                <ul className="space-y-3">
+                  {f.bullets.map((b, i) => (
+                    <li key={i} className="flex items-start gap-3 text-cream/75 text-sm leading-relaxed">
+                      <span className="text-gold mt-0.5 shrink-0">—</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-
-            <div className="flex flex-col justify-center">
-              <p className="text-gold-dark text-sm mb-5">
-                Founder · Real Estate Advisory & Investor Relations
-              </p>
-              <p className="text-navy/65 text-sm leading-relaxed mb-6 italic">
-                Amit brings over a decade of hands-on real estate advisory
-                experience — built entirely around helping Indian HNIs, NRIs,
-                and business families make the right moves in Dubai&rsquo;s market.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "11+ years advising HNIs on building and growing real estate portfolios with market-beating returns",
-                  "Expertise across off-plan launches and secondary market transactions in Dubai's most sought-after communities",
-                  "Trusted by Indian HNI, NRI, and business families for end-to-end investment guidance — from first call to signed deal",
-                  "Direct access to top Dubai developers, brokerages, and off-market inventory that rarely reaches public listings",
-                  "Specialist focus on wealth management through real estate: right market entry, structured acquisition, and planned exit",
-                ].map((b, i) => (
-                  <li key={i} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
-                    <span className="text-gold-dark mt-0.5 shrink-0">—</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="section bg-navy text-cream">
+      <section className="section bg-cream-light">
         <div className="container-x max-w-3xl">
-          <span className="eyebrow text-gold">Our Philosophy</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-light leading-tight mb-8">
+          <span className="eyebrow text-gold-dark">Our Philosophy</span>
+          <h2 className="mt-4 text-navy text-3xl md:text-4xl font-light leading-tight mb-8">
             Real estate is a strategy decision
-            <span className="block italic text-gold">before it&rsquo;s a property decision.</span>
+            <span className="block italic text-gold-dark"> before it is a property decision.</span>
           </h2>
-          <div className="space-y-5 text-cream/65 text-base leading-relaxed">
-            <p>
-              Most agencies sell inventory. We start from the opposite end —
-              what are you actually trying to achieve, and which combination of
-              asset, structure, and timing gets you there with the least
-              avoidable risk.
-            </p>
-            <p>
-              That&rsquo;s the gap we saw for Indian investors specifically: plenty
-              of access to listings, very little access to someone who will
-              think about the exit on day one, who understands repatriation and
-              compliance concerns natively, and who brings the same rigour to a
-              property decision that a well-run business would bring to a
-              capital allocation decision.
-            </p>
-            <p>
-              We deliberately work with a small number of clients at a time.
-              The value we offer depends on it.
-            </p>
+          <div className="space-y-5 text-navy/65 text-base leading-relaxed">
+            <p>Most agencies sell inventory. We start from the opposite end — what are you actually trying to achieve, and which combination of asset, structure, and timing gets you there with the least avoidable risk.</p>
+            <p>That is the gap we saw for Indian investors specifically: plenty of access to listings, very little access to someone who will think about the exit on day one, who understands repatriation and compliance concerns natively, and who brings the same rigour to a property decision that a well-run business would bring to a capital allocation decision.</p>
+            <p>We deliberately work with a small number of clients at a time. The value we offer depends on it.</p>
           </div>
         </div>
       </section>
