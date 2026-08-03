@@ -24,15 +24,15 @@ export default function PropertiesPage() {
     <>
       <section className="bg-navy text-cream pt-40 pb-16">
         <div className="container-x">
-          <span className="eyebrow text-gold">Properties</span>
+          <span className="eyebrow text-gold">Curated Inventory</span>
           <h1 className="mt-5 text-3xl md:text-5xl font-light leading-tight max-w-2xl">
-            Off-plan and secondary,
-            <span className="block italic text-gold">curated, not crowded.</span>
+            Off-plan opportunities,
+            <span className="block italic text-gold">sourced and vetted.</span>
           </h1>
           <p className="mt-5 text-cream/65 text-base max-w-xl leading-relaxed">
-            Every listing below is illustrative of the kind of inventory we work
-            with. Reach out and we&rsquo;ll match you to live opportunities aligned
-            with your goals.
+            Every listing below is a live, verified project. Prices and availability
+            change with each phase — reach out and we&rsquo;ll give you current
+            inventory, floor plans, and payment plan details directly.
           </p>
         </div>
       </section>
@@ -48,50 +48,74 @@ export default function PropertiesPage() {
         <div className="container-x">
           {filtered.length === 0 ? (
             <p className="text-navy/50 text-sm py-20 text-center">
-              No properties match these filters yet — reach out and we&rsquo;ll
-              source one for you directly.
+              No properties match these filters — reach out and we&rsquo;ll source one for you directly.
             </p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filtered.map((p) => (
                 <div
                   key={p.id}
-                  className="group bg-white border border-navy/10 hover:border-gold/50 hover:shadow-card transition-all duration-300"
+                  className="group bg-white border border-navy/10 hover:border-gold/50 hover:shadow-card transition-all duration-300 flex flex-col"
                 >
+                  {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={p.image}
-                      alt={`${p.name} in ${p.area}`}
+                      alt={`${p.name} by ${p.developer}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <span className="absolute top-4 left-4 bg-navy/90 text-gold text-[0.65rem] tracking-widest2 uppercase px-3 py-1.5">
+                    <span className="absolute top-4 left-4 bg-navy/90 text-gold text-[0.65rem] tracking-widest uppercase px-3 py-1.5 rounded-full">
                       {p.type}
                     </span>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-navy font-medium text-lg">{p.name}</h3>
-                    <p className="text-navy/50 text-sm mt-1">{p.area} · {p.category}</p>
-                    <div className="flex items-center justify-between mt-5">
-                      <p className="text-gold-dark font-medium text-sm">{p.price}</p>
-                      <a
-                        href={waLink(`Hi Seiki Properties, I'm interested in ${p.name} (${p.area}).`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-navy text-xs font-medium border-b border-gold pb-0.5 hover:text-gold-dark transition-colors"
-                      >
-                        Enquire →
-                      </a>
+
+                  {/* Details */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <p className="eyebrow text-gold-dark mb-1">{p.developer}</p>
+                    <h3 className="text-navy font-semibold text-lg leading-snug mb-1">{p.name}</h3>
+                    <p className="text-navy/50 text-sm mb-3">{p.area}</p>
+
+                    <p className="text-navy/65 text-sm leading-relaxed mb-4 flex-1">{p.highlight}</p>
+
+                    {/* Stats grid */}
+                    <div className="grid grid-cols-2 gap-3 mb-5 border-t border-navy/8 pt-4">
+                      <Stat label="Bedrooms" value={p.bedrooms} />
+                      <Stat label="Handover" value={p.handover} />
+                      <Stat label="Payment Plan" value={p.paymentPlan} />
+                      <Stat label="Price" value={p.price} highlight />
                     </div>
+
+                    <a
+                      href={waLink(`Hi Seiki Properties, I'm interested in ${p.name} by ${p.developer} (${p.area}). Can you share current pricing and availability?`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-capsule bg-navy hover:bg-navy-light text-cream text-sm font-medium px-6 py-3 w-full justify-center"
+                    >
+                      Enquire on WhatsApp
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
           )}
+
+          <p className="text-navy/40 text-xs text-center mt-12 max-w-2xl mx-auto">
+            Pricing and availability are subject to change at each phase release. All information is provided in good faith based on publicly available developer data. Confirm current pricing directly with us before making any investment decision.
+          </p>
         </div>
       </section>
     </>
+  );
+}
+
+function Stat({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
+  return (
+    <div>
+      <p className="text-[0.65rem] uppercase tracking-widest text-navy/40 mb-0.5">{label}</p>
+      <p className={`text-sm font-medium ${highlight ? "text-gold-dark" : "text-navy"}`}>{value}</p>
+    </div>
   );
 }
 
@@ -114,7 +138,7 @@ function FilterGroup<T extends string>({
           <button
             key={opt}
             onClick={() => onChange(opt)}
-            className={`text-xs px-3.5 py-1.5 rounded-full border transition-colors ${
+            className={`text-xs px-4 py-1.5 rounded-full border transition-colors ${
               active === opt
                 ? "bg-navy text-cream border-navy"
                 : "border-navy/20 text-navy/60 hover:border-gold hover:text-gold-dark"

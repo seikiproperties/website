@@ -12,7 +12,8 @@ const founders = [
     name: "Amit Sharma",
     title: "Co-Founder · Real Estate Advisory & Investor Relations",
     photo: "/images/founder-amit.png",
-    intro: "Amit brings over a decade of hands-on real estate advisory experience — built entirely around helping Indian HNIs, NRIs, and business families make the right moves in Dubai's market.",
+    intro:
+      "Amit brings over a decade of hands-on real estate advisory experience — built entirely around helping Indian HNIs, NRIs, and business families make the right moves in Dubai's market.",
     bullets: [
       "11+ years advising HNIs on building and growing real estate portfolios with market-beating returns",
       "Expertise across off-plan launches and secondary market transactions in Dubai's most sought-after communities",
@@ -25,7 +26,8 @@ const founders = [
     name: "Mayur Gera",
     title: "Co-Founder · Strategy, Marketing & Growth",
     photo: "/images/founder-mayur.png",
-    intro: "Mayur brings close to 20 years of experience spanning entrepreneurship, marketing, sales, and consulting — across Fortune 500 companies, tech startups, and real estate ventures.",
+    intro:
+      "Mayur brings close to 20 years of experience spanning entrepreneurship, marketing, sales, and consulting — across Fortune 500 companies, tech startups, and real estate ventures.",
     bullets: [
       "~20 years across entrepreneurship, marketing, sales and consulting — Fortune 500, tech startups, and real estate",
       "AI-driven GTM architect: built systems managing 100k+ outbound touchpoints/month with documented 2.5% response rates",
@@ -47,7 +49,9 @@ export default function AboutPage() {
             <span className="block italic text-gold">AI-driven strategy. One firm.</span>
           </h1>
           <p className="mt-6 text-cream/65 text-base md:text-lg max-w-2xl leading-relaxed">
-            Seiki Properties was built on a belief that Dubai real estate rewards two things that rarely live in the same place: deep on-ground access and the marketing and strategic rigour of a well-run business. We built the firm around both.
+            Seiki Properties was built on a belief that Dubai real estate rewards two things
+            that rarely live in the same place: deep on-ground access and the marketing and
+            strategic rigour of a well-run business. We built the firm around both.
           </p>
         </div>
       </section>
@@ -58,11 +62,18 @@ export default function AboutPage() {
           <h2 className="mt-4 text-3xl md:text-4xl font-light leading-tight mb-14">
             Two co-founders. One complete advisory.
           </h2>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {founders.map((f) => (
               <div key={f.name}>
                 <div className="relative aspect-[4/5] overflow-hidden mb-8 border border-gold/30 bg-cream-dark">
-                  <Image src={f.photo} alt={"Portrait of " + f.name} fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image
+                    src={f.photo}
+                    alt={`Portrait of ${f.name}`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                   <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-navy via-navy/40 to-transparent pointer-events-none" />
                 </div>
                 <h2 className="text-2xl font-semibold">{f.name}</h2>
@@ -87,11 +98,21 @@ export default function AboutPage() {
           <span className="eyebrow text-gold-dark">Our Philosophy</span>
           <h2 className="mt-4 text-navy text-3xl md:text-4xl font-light leading-tight mb-8">
             Real estate is a strategy decision
-            <span className="block italic text-gold-dark"> before it is a property decision.</span>
+            <span className="block italic text-gold-dark">before it&rsquo;s a property decision.</span>
           </h2>
           <div className="space-y-5 text-navy/65 text-base leading-relaxed">
-            <p>Most agencies sell inventory. We start from the opposite end — what are you actually trying to achieve, and which combination of asset, structure, and timing gets you there with the least avoidable risk.</p>
-            <p>That is the gap we saw for Indian investors specifically: plenty of access to listings, very little access to someone who will think about the exit on day one, who understands repatriation and compliance concerns natively, and who brings the same rigour to a property decision that a well-run business would bring to a capital allocation decision.</p>
+            <p>
+              Most agencies sell inventory. We start from the opposite end —
+              what are you actually trying to achieve, and which combination of
+              asset, structure, and timing gets you there with the least avoidable risk.
+            </p>
+            <p>
+              That&rsquo;s the gap we saw for Indian investors specifically: plenty of access
+              to listings, very little access to someone who will think about the exit on
+              day one, who understands repatriation and compliance concerns natively, and
+              who brings the same rigour to a property decision that a well-run business
+              would bring to a capital allocation decision.
+            </p>
             <p>We deliberately work with a small number of clients at a time. The value we offer depends on it.</p>
           </div>
         </div>
