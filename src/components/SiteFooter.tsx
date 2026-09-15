@@ -104,9 +104,12 @@ export default function SiteFooter() {
             Department (DLD) regulations. All property information is subject to
             developer terms and availability.
           </p>
-          <p className="whitespace-nowrap">
-            &copy; {new Date().getFullYear()} Seiki Properties. All rights reserved.
-          </p>
+          <div className="flex items-center gap-4 whitespace-nowrap">
+            <Link href="/privacy-policy" className="hover:text-cream/70 transition-colors">
+              Privacy Policy
+            </Link>
+            <span>&copy; {new Date().getFullYear()} Seiki Properties. All rights reserved.</span>
+          </div>
         </div>
       </div>
     </footer>
