@@ -12,32 +12,10 @@ export default function ContactPage() {
           <span className="eyebrow text-gold">Contact</span>
           <h1 className="mt-5 text-3xl md:text-5xl font-light leading-tight max-w-2xl">One conversation is usually<span className="block italic text-gold">enough to know.</span></h1>
           <p className="mt-5 text-cream/65 text-base max-w-xl leading-relaxed">Tell us what you&rsquo;re trying to achieve and we&rsquo;ll respond within one business day — sooner on WhatsApp.</p>
-        </div>
-      </section>
-      <section className="section bg-cream-light">
-        <div className="container-x max-w-2xl">
-          <h2 className="text-navy text-xl font-medium mb-8">Reach us directly</h2>
-          <div className="space-y-6">
-            <a href={`tel:${siteConfig.contact.dubaiPhoneHref}`} className="flex items-start gap-4 group">
-              <span className="eyebrow text-gold-dark w-24 shrink-0 pt-0.5">Dubai</span>
-              <span className="text-navy text-sm group-hover:text-gold-dark transition-colors">{siteConfig.contact.dubaiPhone}</span>
-            </a>
-            <a href={`tel:${siteConfig.contact.indiaPhoneHref}`} className="flex items-start gap-4 group">
-              <span className="eyebrow text-gold-dark w-24 shrink-0 pt-0.5">India</span>
-              <span className="text-navy text-sm group-hover:text-gold-dark transition-colors">{siteConfig.contact.indiaPhone}</span>
-            </a>
-            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-start gap-4 group">
-              <span className="eyebrow text-gold-dark w-24 shrink-0 pt-0.5">Email</span>
-              <span className="text-navy text-sm group-hover:text-gold-dark transition-colors break-all">{siteConfig.contact.email}</span>
-            </a>
-            <a href={waLink("Hi Seiki Properties, I'd like to know more about investing in Dubai real estate.")} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
-              <span className="eyebrow text-gold-dark w-24 shrink-0 pt-0.5">WhatsApp</span>
-              <span className="text-navy text-sm group-hover:text-gold-dark transition-colors flex items-center gap-2"><WhatsAppIcon className="w-4 h-4" />Chat with us instantly</span>
-            </a>
-          </div>
-          <div className="mt-10 pt-8 border-t border-navy/10 space-y-6">
-            <div><p className="eyebrow text-gold-dark mb-2">Office</p><p className="text-navy/65 text-sm leading-relaxed">{siteConfig.contact.officeAddress}</p></div>
-            <div><p className="eyebrow text-gold-dark mb-2">Response Time</p><p className="text-navy/65 text-sm leading-relaxed">Within one business day by email or form. Usually within the hour on WhatsApp during Dubai business hours (9am–7pm GST).</p></div>
+          <div className="mt-10 flex flex-col sm:flex-row gap-5">
+            <a href={`tel:${siteConfig.contact.dubaiPhoneHref}`} className="btn-capsule bg-gold hover:bg-gold-light text-navy font-medium px-8 py-4">🇦🇪 {siteConfig.contact.dubaiPhone}</a>
+            <a href={`tel:${siteConfig.contact.indiaPhoneHref}`} className="btn-capsule border border-cream/30 hover:border-gold hover:text-gold text-cream px-8 py-4">🇮🇳 {siteConfig.contact.indiaPhone}</a>
+            <a href={waLink("Hi Seiki Properties, I'd like to know more about investing in Dubai real estate.")} target="_blank" rel="noopener noreferrer" className="btn-capsule border border-cream/30 hover:border-gold hover:text-gold text-cream gap-2 px-8 py-4"><WhatsAppIcon className="w-5 h-5" />WhatsApp Us</a>
           </div>
         </div>
       </section>
