@@ -108,7 +108,7 @@ export default function SiteFooter() {
             <Link href="/privacy-policy" className="hover:text-cream/70 transition-colors">
               Privacy Policy
             </Link>
-            <span>&copy; {new Date().getFullYear()} Seiki Properties. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} SEIKI PROPERTIES L.L.C. All rights reserved.</span>
           </div>
         </div>
       </div>
